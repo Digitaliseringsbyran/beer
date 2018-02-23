@@ -25,7 +25,41 @@
 		<script>
 			$(document).ready(function(){
 				$('.toggle').click(function(){
-					console.log($('#beer-toggle').is(':checked'));
+					var state = $('#beer-toggle').is(':checked'); 
+
+					if (state == true) {
+						jQuery.ajax({
+						   url: "https://beer.localtunnel.me/open",
+						   type: "POST",
+						})
+						.done(function(data, textStatus, jqXHR) {
+						   console.log("HTTP Request Succeeded: " + jqXHR.status);
+						   console.log(data);
+						})
+						.fail(function(jqXHR, textStatus, errorThrown) {
+						   console.log("HTTP Request Failed");
+						})
+						.always(function() {
+						   /* ... */
+						});
+					}
+					else {
+						console.log('false')
+						jQuery.ajax({
+						   url: "https://beer.localtunnel.me/close",
+						   type: "POST",
+						})
+						.done(function(data, textStatus, jqXHR) {
+						   console.log("HTTP Request Succeeded: " + jqXHR.status);
+						   console.log(data);
+						})
+						.fail(function(jqXHR, textStatus, errorThrown) {
+						   console.log("HTTP Request Failed");
+						})
+						.always(function() {
+						   /* ... */
+						});
+					}
 				});
 			});
 		</script>
