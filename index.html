@@ -3,55 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Digitaliseringsbyrån – Prototyper, inte powerpoints</title>
-		<meta name="description" content="Vi hjälper dig att ta din idé till fungerade digital prototyp som du kan sätta i händerna på kollegor, chefer och kunder. Kom igång utan budget, projektgrupp eller specifikation!">
+		<title>Digitaliseringsbyrån – Ölstugan</title>
+		<meta name="description" content="Världens första internetöl">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="/dist/css/main.min.css">
 
-		<!-- Schema.org markup for Google+ -->
-		<meta itemprop="name" content="Vi hjälper dig att ta din idé till fungerade digital prototyp som du kan sätta i händerna på kollegor, chefer och kunder. Kom igång utan budget, projektgrupp eller specifikation!">
-		<meta itemprop="description" content="Vi hjälper dig att ta din idé till fungerade digital prototyp som du kan sätta i händerna på kollegor, chefer och kunder. Kom igång utan budget, projektgrupp eller specifikation!">
-		<meta itemprop="image" content="/dist/img/favicon/cover.png">
-
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@DigbyGbg">
-		<meta name="twitter:title" content="Digitaliseringsbyrån">
-		<meta name="twitter:description" content="Vi hjälper dig att ta din idé till fungerade digital prototyp som du kan sätta i händerna på kollegor, chefer och kunder. Kom igång utan budget, projektgrupp eller specifikation!">
-		<meta name="twitter:creator" content="@DigbyGbg">
-
-		<!-- Open Graph data -->
-		<meta property="og:title" content="Digitaliseringsbyrån" />
-		<meta property="og:type" content="article" />
-		<meta property="og:url" content="https://xn--digitaliseringsbyrn-ixb.se/" />
-		<meta property="og:image" content="/dist/img/favicon/cover.png" />
-		<meta property="og:description" content="Vi hjälper dig att ta din idé till fungerade digital prototyp som du kan sätta i händerna på kollegor, chefer och kunder. Kom igång utan budget, projektgrupp eller specifikation!" />
-		<meta property="og:site_name" content="Digitaliseringsbyrån.se" />
-		<meta property="article:section" content="Article Section" />
-		<meta property="article:tag" content="Article Tag" />
-		<meta property="fb:admins" content="" />
-
-		
-		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/dist/img/favicon/apple-touch-icon-57x57.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/dist/img/favicon/apple-touch-icon-114x114.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/dist/img/favicon/apple-touch-icon-72x72.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/dist/img/favicon/apple-touch-icon-144x144.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/dist/img/favicon/apple-touch-icon-60x60.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/dist/img/favicon/apple-touch-icon-120x120.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/dist/img/favicon/apple-touch-icon-76x76.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/dist/img/favicon/apple-touch-icon-152x152.png" />
-		<link rel="icon" type="image/png" href="/dist/img/favicon/favicon-196x196.png" sizes="196x196" />
-		<link rel="icon" type="image/png" href="/dist/img/favicon/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/png" href="/dist/img/favicon/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="/dist/img/favicon/favicon-16x16.png" sizes="16x16" />
-		<link rel="icon" type="image/png" href="/dist/img/favicon/favicon-128.png" sizes="128x128" />
-		<meta name="application-name" content="Digitaliseringsbyrån"/>
-		<meta name="msapplication-TileColor" content="#FFFFFF" />
-		<meta name="msapplication-TileImage" content="mstile-144x144.png" />
-		<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-		<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-		<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-		<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 		 <script
 	          src="https://code.jquery.com/jquery-3.2.1.min.js"
 	          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -60,11 +17,17 @@
 	</head>
 	<body>
 
-		<main class="flex items-center align-center">
-			<h2>Test</h2>
+		<main class="container--fullscreen flex items-center align-center">
+			<input class="toggle" type="checkbox" id="beer-toggle" /><label class="toggle__label" for="beer-toggle">Toggle</label>
 		</main>
+
+
 		<script>
-			
+			$(document).ready(function(){
+				$('.toggle').click(function(){
+					console.log($('#beer-toggle').is(':checked'));
+				});
+			});
 		</script>
 
 	</body>

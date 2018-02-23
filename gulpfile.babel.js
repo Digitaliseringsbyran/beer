@@ -25,12 +25,7 @@ gulp.task('css:dist', () => {
 		cssnano({ mergeLonghand: false, zindex: false })
 	];
 	return gulp.src('./src/scss/*.scss')
-		.pipe(plumber({
-			errorHandler: error => {
-				gutil.beep()
-				console.log(error)
-			}
-		}))
+		.pipe(plumber())
 		.pipe(sass())
 		.pipe(postcss(plugins))
 		.pipe(rename({suffix: '.min'}))
